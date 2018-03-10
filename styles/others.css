@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  font-family: "Khula", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.full-menu {
+  display: none;
+}
+
+.hamburger {
+  color: #515151;
+  font-size: 2em;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+
+.full-menu {
+  width: 150px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+  display: none;
+}
+
+.full-menu.open {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1em 2em;
+  margin-top: 0;
+  width: 40%;
+  position: absolute;
+  background: rgba(255,255,255,1);
+  top: 50px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  transform: translate(0,280);
+    -webkit-transform: translate(0,280); /** Chrome & Safari **/
+    -o-transform: translate(0,280); /** Opera **/
+    -moz-transform: translate(0,280); /** Firefox **/
+    z-index: 100;
+}
+
+.full-menu a {
+  text-decoration: none;
+  color: #515151;
+  padding: 1em 0;
+  border-bottom: 1px solid #515151;
+  margin: 0;
+}
+
+h1 {
+  display: inline-block;
+  font-family: "Yesteryear";
+  color: #a26769;
+  margin: 0;
+  padding: 1em 0;
+  font-weight: bolder;
+  letter-spacing: .1em;
+  border-bottom: 1px solid #515151;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  color: #a26769;
+  font-size: 1.2em;
+}
+
+p {
+  color: #515151;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.btn {
+  display: inline-block;
+  color: #515151;
+  text-decoration: underline;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.btn:hover {
+  color: #a26769;
+}
+
+/* Hero */
+
+#hero {
+  min-height: 500px;
+}
+
+#hero .hero-bg {
+  position: absolute;
+  background: url("/assets/others.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-color: #8594c8;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+}
+
+#hero h1 {
+  padding-top: 150px;
+  padding-bottom: 0;
+}
+
+#hero .content-wrap, {
+  padding: 0 1.5em;
+}
+
+/* Projects */
+
+#projects {
+  padding:  0 1em;
+  background: #fff;
+  text-align: left;
+}
+
+#projects ul {
+  list-style: none;
+  margin: 0;
+  padding: 2em 0;
+
+}
+
+#projects li {
+  margin-bottom: 1em;
+  background: #fff;
+}
+
+.card-content {
+  padding: 1em;
+}
+
+#projects h3 {
+  color: #4a4062;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  margin-bottom: 0;
+}
+
+#projects h4 {
+  padding: 0;
+  margin: 0;
+}
+/* Contact */
+
+#contact {
+  color: #515151;
+  padding: 0 2em;
+  margin: 1em;;
+}
+
+#contact ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2em auto;
+  padding: 0;
+}
+
+#contact li a {
+  color: #515151;
+  padding: 1em;
+}
+
+#contact a {
+  color: #515151;
+  font-weight: lighter;
+}
+
+#contact .content-wrap {
+  border-top: 5px solid #515151;
+  padding: 4em 0 1em 0;
+}
+
+/* Footer */
+
+#footer {
+  padding:2em;
+  background: #515151;
+  color: #fff;
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media(min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  .content-wrap,
+  #projects ul {
+    grid-column: 2/4;
+  }
+
+  #hero .hero-bg {
+    background-size: 800px;
+  }
+
+  h1 {
+    padding: 1em;
+  }
+
+  #projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  #projects .card {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #projects img {
+    max-width: 50%;
+  }
+
+  #projects p {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .card-content {
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 1em;
+  }
+  #footer small {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hamburger {
+    display: none;
+  }
+
+  .full-menu {
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+    text-transform: uppercase;
+  }
+
+  .full-menu a {
+    margin: .5em 2em 0 2em;
+    padding: 1em;
+    border: none;
+    font-size: 15px;
+    letter-spacing: .2em;
+    font-weight: 900;
+  }
+}
