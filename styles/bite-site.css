@@ -110,9 +110,9 @@ h3 {
 
 p {
   padding: 0;
-  /* margin-bottom: 1em; */
   color: #515151;
 }
+
 /* Case Study Navigation */
 
 #sec-nav {
@@ -212,7 +212,7 @@ p {
 }
 
 #contact h2 {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 #contact ul {

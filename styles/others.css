@@ -82,13 +82,13 @@ h2 {
   margin: 0;
   padding: 0;
   color: #a26769;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 p {
   color: #515151;
   margin: 0;
-  padding: 1em 0;
+  padding: 0;
 }
 
 .btn {
@@ -159,14 +159,21 @@ p {
   color: #4a4062;
   font-weight: 900;
   text-transform: uppercase;
-  padding-bottom: 1em;
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 
 #projects h4 {
-  padding: 0;
+  color: #4a4062;
+  padding: 1em 0 0 0;
   margin: 0;
 }
+
+#projects a {
+  padding-top: 1em;
+  font-size: 1em;
+}
+
 /* Contact */
 
 #contact {
